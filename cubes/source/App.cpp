@@ -67,9 +67,12 @@ App::App(const GApp::Settings& settings) : GApp(settings) {
 // Called before the application loop begins.  Load data here and
 // not in the constructor so that common exceptions will be
 // automatically caught.
+/** App::onInit is modified to add functionality for printing out the framerate information. */
 void App::onInit() {
     GApp::onInit();
 
+    G3D::debugPrintf("Target frame rate = %f Hz\n", 1.0f / realTimeTargetDuration());
+    
     setFrameDuration(1.0f / 240.0f);
 
     // Call setScene(shared_ptr<Scene>()) or setScene(MyScene::create()) to replace
