@@ -93,15 +93,18 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="source\App.h" />
+    <ClInclude Include="Staircase.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\App.cpp" />
+    <ClCompile Include="Staircase.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="resources.rc" />
   </ItemGroup>
   <ItemGroup>
     <None Include="data-files\scene\cornellBox.Scene.Any" />
+    <None Include="data-files\scene\staircaseTest.Scene.Any" />
     <None Include="data-files\scene\whiteCube.Scene.Any" />
     <None Include="data-files\scene\whiteCubeRotated.Scene.Any" />
     <None Include="data-files\test.Scene.Any" />

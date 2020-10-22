@@ -1,0 +1,39 @@
+// -*- c++ -*-
+{
+    name = "Staircase Test";
+
+    models = {
+       cubeModel = ArticulatedModel::Specification {
+            // this crate model is a cube of length 1m
+            filename = "model/crate/crate.obj";
+            preprocess = {
+                setMaterial(all(), "model/crate/woodcrate-L.png");
+            };
+       };
+    };
+
+    entities = {
+       skybox = Skybox {
+            texture = "cubemap/whiteroom/whiteroom-*.png";
+       };
+
+       sun = Light {
+            attenuation = (0, 0, 1);
+            bulbPower = Power3(1e+005);
+            frame = CFrame::fromXYZYPRDegrees(-15, 207, -41, -164, -77, 77);
+            shadowMapSize = Vector2int16(2048, 2048);
+            spotHalfAngleDegrees = 5;
+            rectangular = true;
+            type = "SPOT";
+        };
+
+        cube0 = VisibleEntity {
+            model = "cubeModel";
+            frame = CFrame::fromXYZYPRDegrees(0, 0, -2, 45, 0, 0);
+        };
+
+        camera = Camera {
+            frame = CFrame::fromXYZYPRDegrees(0, 0, 5);
+        };
+    };
+};

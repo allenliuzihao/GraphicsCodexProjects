@@ -4,9 +4,15 @@
     <ClCompile Include="source\App.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Staircase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\App.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Staircase.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -27,6 +33,9 @@
       <Filter>Scene Files</Filter>
     </None>
     <None Include="data-files\scene\cornellBox.Scene.Any">
+      <Filter>Scene Files</Filter>
+    </None>
+    <None Include="data-files\scene\staircaseTest.Scene.Any">
       <Filter>Scene Files</Filter>
     </None>
   </ItemGroup>
