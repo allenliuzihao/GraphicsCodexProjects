@@ -102,6 +102,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="data-files\scene\whiteCube.Scene.Any" />
+    <None Include="data-files\scene\whiteCubeRotated.Scene.Any" />
     <None Include="data-files\test.Scene.Any" />
     <None Include="Doxyfile" />
     <None Include="journal\journal.md.html" />
