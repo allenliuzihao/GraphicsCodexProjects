@@ -26,6 +26,9 @@
     <None Include="data-files\scene\whiteCubeRotated.Scene.Any">
       <Filter>Scene Files</Filter>
     </None>
+    <None Include="data-files\scene\cornellBox.Scene.Any">
+      <Filter>Scene Files</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">

@@ -101,6 +101,7 @@
     <ResourceCompile Include="resources.rc" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="data-files\scene\cornellBox.Scene.Any" />
     <None Include="data-files\scene\whiteCube.Scene.Any" />
     <None Include="data-files\scene\whiteCubeRotated.Scene.Any" />
     <None Include="data-files\test.Scene.Any" />
