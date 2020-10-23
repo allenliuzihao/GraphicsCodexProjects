@@ -4,7 +4,7 @@
     <ClCompile Include="source\App.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Staircase.cpp">
+    <ClCompile Include="source\Staircase.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -12,7 +12,7 @@
     <ClInclude Include="source\App.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Staircase.h">
+    <ClInclude Include="source\Staircase.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

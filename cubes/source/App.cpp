@@ -73,6 +73,12 @@ void App::onInit() {
 
     G3D::debugPrintf("Target frame rate = %f Hz\n", 1.0f / realTimeTargetDuration());
     
+    // code for generating stair case.
+    /*
+    Staircase sc;
+    sc.saveAny("scene/staircase.Scene.Any");
+    */
+    
     setFrameDuration(1.0f / 240.0f);
 
     // Call setScene(shared_ptr<Scene>()) or setScene(MyScene::create()) to replace

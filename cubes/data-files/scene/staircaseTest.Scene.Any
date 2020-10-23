@@ -7,7 +7,8 @@
             // this crate model is a cube of length 1m
             filename = "model/crate/crate.obj";
             preprocess = {
-                setMaterial(all(), "model/crate/woodcrate-L.png");
+                setMaterial(all(), "model/crate/metalcrate-L.png");
+                transformGeometry(all(), Matrix4::scale(1.5, 0.1, 0.35));
             };
        };
     };
@@ -29,7 +30,7 @@
 
         cube0 = VisibleEntity {
             model = "cubeModel";
-            frame = CFrame::fromXYZYPRDegrees(0, 0, -2, 45, 0, 0);
+            frame = CFrame::fromXYZYPRDegrees(0, 0, 0, 0, 0, 0);
         };
 
         camera = Camera {
