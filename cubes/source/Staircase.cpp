@@ -64,7 +64,6 @@ void Staircase::generate() {
     camera["frame"] = G3D::CFrame::fromXYZYPRDegrees(0, 0, 5);
     entities["camera"] = camera;
 
-    G3D::Point3 startPoint = center + G3D::Point3(stairLength / 2.0f, 0, 0);
     float angle = 0.0;
     float currHeight = 0.0;
 
@@ -72,7 +71,10 @@ void Staircase::generate() {
     cube["model"] = "cubeModel";
 
     for (int i = 0; i < numSteps; ++i) {
-        cube["frame"] = (Matrix4::yawDegrees(angle) * Matrix4::translation(startPoint + Vector3(0, currHeight, 0))).approxCoordinateFrame();
+        cube["frame"] = 
+            (Matrix4::translation(center) 
+                * Matrix4::yawDegrees(angle) 
+                * Matrix4::translation(G3D::Point3(stairLength / 2.0f, 0, 0) + Vector3(0, currHeight, 0))).approxCoordinateFrame();
 
         entities.set(G3D::String("cube" + std::to_string(i)), cube);
 

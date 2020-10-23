@@ -75,7 +75,7 @@ void App::onInit() {
     
     // code for generating stair case.
     /*
-    Staircase sc;
+    Staircase sc(Point3(2.0, 2.0, 2.0), 10, 1.5, 0.35, 0.1,  100);
     sc.saveAny("scene/staircase.Scene.Any");
     */
     

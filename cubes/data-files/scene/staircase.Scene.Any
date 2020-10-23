@@ -5,502 +5,502 @@
         }; 
         
         cube0 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(0.75, 0, 0 ); 
+            frame = CFrame::fromXYZYPRDegrees(2.75, 2, 2 ); 
             model = "cubeModel"; 
         }; 
         
         cube1 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(0.724444, 0.1, -0.194114, 15 ); 
+            frame = CFrame::fromXYZYPRDegrees(2.73861, 2.1, 1.86976, 10 ); 
             model = "cubeModel"; 
         }; 
         
         cube10 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(-0.649519, 1, -0.375, 150 ); 
+            frame = CFrame::fromXYZYPRDegrees(1.86976, 3, 1.26139, 100 ); 
             model = "cubeModel"; 
         }; 
         
         cube11 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(-0.724444, 1.1, -0.194114, 165 ); 
+            frame = CFrame::fromXYZYPRDegrees(1.74348, 3.1, 1.29523, 110 ); 
             model = "cubeModel"; 
         }; 
         
         cube12 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(-0.75, 1.2, 6.55671e-08, -180 ); 
+            frame = CFrame::fromXYZYPRDegrees(1.625, 3.2, 1.35048, 120 ); 
             model = "cubeModel"; 
         }; 
         
         cube13 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(-0.724444, 1.3, 0.194114, -165 ); 
+            frame = CFrame::fromXYZYPRDegrees(1.51791, 3.3, 1.42547, 130 ); 
             model = "cubeModel"; 
         }; 
         
         cube14 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(-0.649519, 1.4, 0.375, -150 ); 
+            frame = CFrame::fromXYZYPRDegrees(1.42547, 3.4, 1.51791, 140 ); 
             model = "cubeModel"; 
         }; 
         
         cube15 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(-0.53033, 1.5, 0.53033, -135 ); 
+            frame = CFrame::fromXYZYPRDegrees(1.35048, 3.5, 1.625, 150 ); 
             model = "cubeModel"; 
         }; 
         
         cube16 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(-0.375, 1.6, 0.649519, -120 ); 
+            frame = CFrame::fromXYZYPRDegrees(1.29523, 3.6, 1.74348, 160 ); 
             model = "cubeModel"; 
         }; 
         
         cube17 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(-0.194114, 1.7, 0.724444, -105 ); 
+            frame = CFrame::fromXYZYPRDegrees(1.26139, 3.7, 1.86976, 170 ); 
             model = "cubeModel"; 
         }; 
         
         cube18 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(1.31134e-07, 1.8, 0.75, -90 ); 
+            frame = CFrame::fromXYZYPRDegrees(1.25, 3.8, 2, -180 ); 
             model = "cubeModel"; 
         }; 
         
         cube19 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(0.194114, 1.9, 0.724444, -75 ); 
+            frame = CFrame::fromXYZYPRDegrees(1.26139, 3.9, 2.13024, -170 ); 
             model = "cubeModel"; 
         }; 
         
         cube2 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(0.649519, 0.2, -0.375, 30 ); 
+            frame = CFrame::fromXYZYPRDegrees(2.70477, 2.2, 1.74348, 20 ); 
             model = "cubeModel"; 
         }; 
         
         cube20 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(0.375, 2, 0.649519, -60 ); 
+            frame = CFrame::fromXYZYPRDegrees(1.29523, 4, 2.25652, -160 ); 
             model = "cubeModel"; 
         }; 
         
         cube21 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(0.53033, 2.1, 0.53033, -45 ); 
+            frame = CFrame::fromXYZYPRDegrees(1.35048, 4.1, 2.375, -150 ); 
             model = "cubeModel"; 
         }; 
         
         cube22 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(0.649519, 2.2, 0.375, -30 ); 
+            frame = CFrame::fromXYZYPRDegrees(1.42547, 4.2, 2.48209, -140 ); 
             model = "cubeModel"; 
         }; 
         
         cube23 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(0.724444, 2.3, 0.194114, -15 ); 
+            frame = CFrame::fromXYZYPRDegrees(1.51791, 4.3, 2.57453, -130 ); 
             model = "cubeModel"; 
         }; 
         
         cube24 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(0.75, 2.4, -1.31134e-07 ); 
+            frame = CFrame::fromXYZYPRDegrees(1.625, 4.4, 2.64952, -120 ); 
             model = "cubeModel"; 
         }; 
         
         cube25 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(0.724444, 2.5, -0.194114, 15 ); 
+            frame = CFrame::fromXYZYPRDegrees(1.74349, 4.5, 2.70477, -110 ); 
             model = "cubeModel"; 
         }; 
         
         cube26 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(0.649519, 2.6, -0.375, 30 ); 
+            frame = CFrame::fromXYZYPRDegrees(1.86976, 4.6, 2.73861, -100 ); 
             model = "cubeModel"; 
         }; 
         
         cube27 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(0.53033, 2.7, -0.53033, 45 ); 
+            frame = CFrame::fromXYZYPRDegrees(2, 4.7, 2.75, -90 ); 
             model = "cubeModel"; 
         }; 
         
         cube28 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(0.375, 2.8, -0.649519, 60 ); 
+            frame = CFrame::fromXYZYPRDegrees(2.13024, 4.8, 2.73861, -80 ); 
             model = "cubeModel"; 
         }; 
         
         cube29 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(0.194115, 2.9, -0.724444, 75 ); 
+            frame = CFrame::fromXYZYPRDegrees(2.25652, 4.9, 2.70477, -70 ); 
             model = "cubeModel"; 
         }; 
         
         cube3 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(0.53033, 0.3, -0.53033, 45 ); 
+            frame = CFrame::fromXYZYPRDegrees(2.64952, 2.3, 1.625, 30 ); 
             model = "cubeModel"; 
         }; 
         
         cube30 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(-1.78873e-08, 3, -0.75, 90 ); 
+            frame = CFrame::fromXYZYPRDegrees(2.375, 5, 2.64952, -60 ); 
             model = "cubeModel"; 
         }; 
         
         cube31 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(-0.194114, 3.1, -0.724444, 105 ); 
+            frame = CFrame::fromXYZYPRDegrees(2.48209, 5.1, 2.57453, -50 ); 
             model = "cubeModel"; 
         }; 
         
         cube32 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(-0.375, 3.2, -0.649519, 120 ); 
+            frame = CFrame::fromXYZYPRDegrees(2.57453, 5.2, 2.48209, -40 ); 
             model = "cubeModel"; 
         }; 
         
         cube33 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(-0.53033, 3.3, -0.53033, 135 ); 
+            frame = CFrame::fromXYZYPRDegrees(2.64952, 5.3, 2.375, -30 ); 
             model = "cubeModel"; 
         }; 
         
         cube34 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(-0.649519, 3.4, -0.375, 150 ); 
+            frame = CFrame::fromXYZYPRDegrees(2.70477, 5.4, 2.25652, -20 ); 
             model = "cubeModel"; 
         }; 
         
         cube35 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(-0.724444, 3.5, -0.194115, 165 ); 
+            frame = CFrame::fromXYZYPRDegrees(2.73861, 5.5, 2.13024, -10 ); 
             model = "cubeModel"; 
         }; 
         
         cube36 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(-0.75, 3.6, 1.78873e-08, -180 ); 
+            frame = CFrame::fromXYZYPRDegrees(2.75, 5.6, 2 ); 
             model = "cubeModel"; 
         }; 
         
         cube37 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(-0.724445, 3.7, 0.194114, -165 ); 
+            frame = CFrame::fromXYZYPRDegrees(2.73861, 5.7, 1.86976, 10 ); 
             model = "cubeModel"; 
         }; 
         
         cube38 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(-0.649519, 3.8, 0.375, -150 ); 
+            frame = CFrame::fromXYZYPRDegrees(2.70477, 5.8, 1.74348, 20 ); 
             model = "cubeModel"; 
         }; 
         
         cube39 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(-0.53033, 3.9, 0.53033, -135 ); 
+            frame = CFrame::fromXYZYPRDegrees(2.64952, 5.9, 1.625, 30 ); 
             model = "cubeModel"; 
         }; 
         
         cube4 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(0.375, 0.4, -0.649519, 60 ); 
+            frame = CFrame::fromXYZYPRDegrees(2.57453, 2.4, 1.51791, 40 ); 
             model = "cubeModel"; 
         }; 
         
         cube40 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(-0.375, 4, 0.649519, -120 ); 
+            frame = CFrame::fromXYZYPRDegrees(2.57453, 6, 1.51791, 40 ); 
             model = "cubeModel"; 
         }; 
         
         cube41 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(-0.194114, 4.1, 0.724444, -105 ); 
+            frame = CFrame::fromXYZYPRDegrees(2.48209, 6.1, 1.42547, 50 ); 
             model = "cubeModel"; 
         }; 
         
         cube42 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(-4.52987e-07, 4.2, 0.75, -90 ); 
+            frame = CFrame::fromXYZYPRDegrees(2.375, 6.2, 1.35048, 60 ); 
             model = "cubeModel"; 
         }; 
         
         cube43 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(0.194114, 4.3, 0.724444, -75 ); 
+            frame = CFrame::fromXYZYPRDegrees(2.25652, 6.3, 1.29523, 70 ); 
             model = "cubeModel"; 
         }; 
         
         cube44 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(0.375, 4.4, 0.649519, -60 ); 
+            frame = CFrame::fromXYZYPRDegrees(2.13024, 6.4, 1.26139, 80 ); 
             model = "cubeModel"; 
         }; 
         
         cube45 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(0.53033, 4.5, 0.53033, -45 ); 
+            frame = CFrame::fromXYZYPRDegrees(2, 6.5, 1.25, 90 ); 
             model = "cubeModel"; 
         }; 
         
         cube46 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(0.649519, 4.6, 0.375, -30 ); 
+            frame = CFrame::fromXYZYPRDegrees(1.86976, 6.6, 1.26139, 100 ); 
             model = "cubeModel"; 
         }; 
         
         cube47 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(0.724444, 4.7, 0.194114, -15 ); 
+            frame = CFrame::fromXYZYPRDegrees(1.74348, 6.7, 1.29523, 110 ); 
             model = "cubeModel"; 
         }; 
         
         cube48 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(0.75, 4.8, -2.62268e-07, 2.00358e-05 ); 
+            frame = CFrame::fromXYZYPRDegrees(1.625, 6.8, 1.35048, 120 ); 
             model = "cubeModel"; 
         }; 
         
         cube49 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(0.724444, 4.9, -0.194114, 15 ); 
+            frame = CFrame::fromXYZYPRDegrees(1.51791, 6.9, 1.42547, 130 ); 
             model = "cubeModel"; 
         }; 
         
         cube5 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(0.194114, 0.5, -0.724444, 75 ); 
+            frame = CFrame::fromXYZYPRDegrees(2.48209, 2.5, 1.42547, 50 ); 
             model = "cubeModel"; 
         }; 
         
         cube50 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(0.649519, 5, -0.375, 30 ); 
+            frame = CFrame::fromXYZYPRDegrees(1.42547, 7, 1.51791, 140 ); 
             model = "cubeModel"; 
         }; 
         
         cube51 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(0.53033, 5.1, -0.53033, 45 ); 
+            frame = CFrame::fromXYZYPRDegrees(1.35048, 7.1, 1.625, 150 ); 
             model = "cubeModel"; 
         }; 
         
         cube52 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(0.375, 5.2, -0.649519, 60 ); 
+            frame = CFrame::fromXYZYPRDegrees(1.29523, 7.2, 1.74348, 160 ); 
             model = "cubeModel"; 
         }; 
         
         cube53 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(0.194115, 5.3, -0.724444, 75 ); 
+            frame = CFrame::fromXYZYPRDegrees(1.26139, 7.3, 1.86976, 170 ); 
             model = "cubeModel"; 
         }; 
         
         cube54 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(2.08606e-07, 5.4, -0.75, 90 ); 
+            frame = CFrame::fromXYZYPRDegrees(1.25, 7.4, 2, -180 ); 
             model = "cubeModel"; 
         }; 
         
         cube55 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(-0.194114, 5.5, -0.724444, 105 ); 
+            frame = CFrame::fromXYZYPRDegrees(1.26139, 7.5, 2.13024, -170 ); 
             model = "cubeModel"; 
         }; 
         
         cube56 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(-0.375, 5.6, -0.649519, 120 ); 
+            frame = CFrame::fromXYZYPRDegrees(1.29523, 7.6, 2.25652, -160 ); 
             model = "cubeModel"; 
         }; 
         
         cube57 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(-0.530331, 5.7, -0.53033, 135 ); 
+            frame = CFrame::fromXYZYPRDegrees(1.35048, 7.7, 2.375, -150 ); 
             model = "cubeModel"; 
         }; 
         
         cube58 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(-0.649519, 5.8, -0.375, 150 ); 
+            frame = CFrame::fromXYZYPRDegrees(1.42547, 7.8, 2.48209, -140 ); 
             model = "cubeModel"; 
         }; 
         
         cube59 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(-0.724444, 5.9, -0.194114, 165 ); 
+            frame = CFrame::fromXYZYPRDegrees(1.51791, 7.9, 2.57453, -130 ); 
             model = "cubeModel"; 
         }; 
         
         cube6 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(-6.55671e-08, 0.6, -0.75, 90 ); 
+            frame = CFrame::fromXYZYPRDegrees(2.375, 2.6, 1.35048, 60 ); 
             model = "cubeModel"; 
         }; 
         
         cube60 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(-0.75, 6, -2.08606e-07, 180 ); 
+            frame = CFrame::fromXYZYPRDegrees(1.625, 8, 2.64952, -120 ); 
             model = "cubeModel"; 
         }; 
         
         cube61 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(-0.724444, 6.1, 0.194114, -165 ); 
+            frame = CFrame::fromXYZYPRDegrees(1.74348, 8.1, 2.70477, -110 ); 
             model = "cubeModel"; 
         }; 
         
         cube62 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(-0.649519, 6.2, 0.375, -150 ); 
+            frame = CFrame::fromXYZYPRDegrees(1.86976, 8.2, 2.73861, -100 ); 
             model = "cubeModel"; 
         }; 
         
         cube63 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(-0.53033, 6.3, 0.53033, -135 ); 
+            frame = CFrame::fromXYZYPRDegrees(2, 8.3, 2.75, -90 ); 
             model = "cubeModel"; 
         }; 
         
         cube64 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(-0.374999, 6.4, 0.649519, -120 ); 
+            frame = CFrame::fromXYZYPRDegrees(2.13024, 8.4, 2.73861, -80 ); 
             model = "cubeModel"; 
         }; 
         
         cube65 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(-0.194114, 6.5, 0.724444, -105 ); 
+            frame = CFrame::fromXYZYPRDegrees(2.25651, 8.5, 2.70477, -70 ); 
             model = "cubeModel"; 
         }; 
         
         cube66 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(3.57746e-08, 6.6, 0.75, -90 ); 
+            frame = CFrame::fromXYZYPRDegrees(2.375, 8.6, 2.64952, -60 ); 
             model = "cubeModel"; 
         }; 
         
         cube67 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(0.194115, 6.7, 0.724444, -74.9999 ); 
+            frame = CFrame::fromXYZYPRDegrees(2.48209, 8.7, 2.57453, -50 ); 
             model = "cubeModel"; 
         }; 
         
         cube68 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(0.375001, 6.8, 0.649519, -60 ); 
+            frame = CFrame::fromXYZYPRDegrees(2.57453, 8.8, 2.48209, -40 ); 
             model = "cubeModel"; 
         }; 
         
         cube69 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(0.53033, 6.9, 0.53033, -45 ); 
+            frame = CFrame::fromXYZYPRDegrees(2.64952, 8.9, 2.375, -30 ); 
             model = "cubeModel"; 
         }; 
         
         cube7 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(-0.194114, 0.7, -0.724444, 105 ); 
+            frame = CFrame::fromXYZYPRDegrees(2.25652, 2.7, 1.29523, 70 ); 
             model = "cubeModel"; 
         }; 
         
         cube70 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(0.649519, 7, 0.375001, -30 ); 
+            frame = CFrame::fromXYZYPRDegrees(2.70477, 9, 2.25652, -20 ); 
             model = "cubeModel"; 
         }; 
         
         cube71 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(0.724445, 7.1, 0.194114, -15 ); 
+            frame = CFrame::fromXYZYPRDegrees(2.73861, 9.1, 2.13024, -10 ); 
             model = "cubeModel"; 
         }; 
         
         cube72 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(0.75, 7.2, -3.57746e-08 ); 
+            frame = CFrame::fromXYZYPRDegrees(2.75, 9.2, 2, 2.00358e-05 ); 
             model = "cubeModel"; 
         }; 
         
         cube73 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(0.724444, 7.3, -0.194114, 15 ); 
+            frame = CFrame::fromXYZYPRDegrees(2.73861, 9.3, 1.86976, 10 ); 
             model = "cubeModel"; 
         }; 
         
         cube74 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(0.649519, 7.4, -0.374999, 30 ); 
+            frame = CFrame::fromXYZYPRDegrees(2.70477, 9.4, 1.74348, 20 ); 
             model = "cubeModel"; 
         }; 
         
         cube75 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(0.53033, 7.5, -0.53033, 45 ); 
+            frame = CFrame::fromXYZYPRDegrees(2.64952, 9.5, 1.625, 30 ); 
             model = "cubeModel"; 
         }; 
         
         cube76 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(0.375, 7.6, -0.649519, 60 ); 
+            frame = CFrame::fromXYZYPRDegrees(2.57453, 9.59999, 1.51791, 40 ); 
             model = "cubeModel"; 
         }; 
         
         cube77 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(0.194114, 7.7, -0.724444, 75 ); 
+            frame = CFrame::fromXYZYPRDegrees(2.48209, 9.7, 1.42547, 50 ); 
             model = "cubeModel"; 
         }; 
         
         cube78 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(-9.95411e-07, 7.79999, -0.75, 90.0001 ); 
+            frame = CFrame::fromXYZYPRDegrees(2.375, 9.8, 1.35048, 60 ); 
             model = "cubeModel"; 
         }; 
         
         cube79 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(-0.194115, 7.89999, -0.724444, 105 ); 
+            frame = CFrame::fromXYZYPRDegrees(2.25652, 9.89999, 1.29523, 70 ); 
             model = "cubeModel"; 
         }; 
         
         cube8 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(-0.375, 0.8, -0.649519, 120 ); 
+            frame = CFrame::fromXYZYPRDegrees(2.13024, 2.8, 1.26139, 80 ); 
             model = "cubeModel"; 
         }; 
         
         cube80 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(-0.375, 7.99999, -0.649519, 120 ); 
+            frame = CFrame::fromXYZYPRDegrees(2.13024, 9.99999, 1.26139, 80 ); 
             model = "cubeModel"; 
         }; 
         
         cube81 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(-0.53033, 8.09999, -0.530331, 135 ); 
+            frame = CFrame::fromXYZYPRDegrees(2, 10.1, 1.25, 90 ); 
             model = "cubeModel"; 
         }; 
         
         cube82 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(-0.649519, 8.2, -0.375, 150 ); 
+            frame = CFrame::fromXYZYPRDegrees(1.86976, 10.2, 1.26139, 100 ); 
             model = "cubeModel"; 
         }; 
         
         cube83 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(-0.724444, 8.3, -0.194114, 165 ); 
+            frame = CFrame::fromXYZYPRDegrees(1.74348, 10.3, 1.29523, 110 ); 
             model = "cubeModel"; 
         }; 
         
         cube84 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(-0.75, 8.4, -4.351e-07, 180 ); 
+            frame = CFrame::fromXYZYPRDegrees(1.625, 10.4, 1.35048, 120 ); 
             model = "cubeModel"; 
         }; 
         
         cube85 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(-0.724444, 8.5, 0.194113, -165 ); 
+            frame = CFrame::fromXYZYPRDegrees(1.51791, 10.5, 1.42547, 130 ); 
             model = "cubeModel"; 
         }; 
         
         cube86 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(-0.649519, 8.6, 0.375, -150 ); 
+            frame = CFrame::fromXYZYPRDegrees(1.42547, 10.6, 1.51791, 140 ); 
             model = "cubeModel"; 
         }; 
         
         cube87 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(-0.53033, 8.7, 0.53033, -135 ); 
+            frame = CFrame::fromXYZYPRDegrees(1.35048, 10.7, 1.625, 150 ); 
             model = "cubeModel"; 
         }; 
         
         cube88 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(-0.375, 8.8, 0.649519, -120 ); 
+            frame = CFrame::fromXYZYPRDegrees(1.29523, 10.8, 1.74348, 160 ); 
             model = "cubeModel"; 
         }; 
         
         cube89 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(-0.194113, 8.9, 0.724444, -105 ); 
+            frame = CFrame::fromXYZYPRDegrees(1.26139, 10.9, 1.86976, 170 ); 
             model = "cubeModel"; 
         }; 
         
         cube9 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(-0.53033, 0.9, -0.53033, 135 ); 
+            frame = CFrame::fromXYZYPRDegrees(2, 2.9, 1.25, 90 ); 
             model = "cubeModel"; 
         }; 
         
         cube90 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(5.24537e-07, 9, 0.75, -90 ); 
+            frame = CFrame::fromXYZYPRDegrees(1.25, 11, 2, 180 ); 
             model = "cubeModel"; 
         }; 
         
         cube91 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(0.194114, 9.1, 0.724444, -75 ); 
+            frame = CFrame::fromXYZYPRDegrees(1.26139, 11.1, 2.13024, -170 ); 
             model = "cubeModel"; 
         }; 
         
         cube92 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(0.375, 9.2, 0.649519, -60 ); 
+            frame = CFrame::fromXYZYPRDegrees(1.29523, 11.2, 2.25652, -160 ); 
             model = "cubeModel"; 
         }; 
         
         cube93 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(0.530331, 9.3, 0.53033, -45 ); 
+            frame = CFrame::fromXYZYPRDegrees(1.35048, 11.3, 2.375, -150 ); 
             model = "cubeModel"; 
         }; 
         
         cube94 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(0.649519, 9.4, 0.375, -30 ); 
+            frame = CFrame::fromXYZYPRDegrees(1.42547, 11.4, 2.48209, -140 ); 
             model = "cubeModel"; 
         }; 
         
         cube95 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(0.724444, 9.5, 0.194115, -15 ); 
+            frame = CFrame::fromXYZYPRDegrees(1.51791, 11.5, 2.57453, -130 ); 
             model = "cubeModel"; 
         }; 
         
         cube96 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(0.75, 9.6, -5.24537e-07, 4.00716e-05 ); 
+            frame = CFrame::fromXYZYPRDegrees(1.625, 11.6, 2.64952, -120 ); 
             model = "cubeModel"; 
         }; 
         
         cube97 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(0.724444, 9.7, -0.194114, 15 ); 
+            frame = CFrame::fromXYZYPRDegrees(1.74348, 11.7, 2.70477, -110 ); 
             model = "cubeModel"; 
         }; 
         
         cube98 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(0.649519, 9.8, -0.375, 30 ); 
+            frame = CFrame::fromXYZYPRDegrees(1.86976, 11.8, 2.73861, -99.9999 ); 
             model = "cubeModel"; 
         }; 
         
         cube99 = VisibleEntity { 
-            frame = CFrame::fromXYZYPRDegrees(0.53033, 9.9, -0.53033, 45 ); 
+            frame = CFrame::fromXYZYPRDegrees(2, 11.9, 2.75, -90 ); 
             model = "cubeModel"; 
         }; 
         
