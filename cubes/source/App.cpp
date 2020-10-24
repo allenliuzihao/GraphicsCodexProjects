@@ -78,6 +78,9 @@ void App::onInit() {
     Staircase sc(Point3(2.0, 2.0, 2.0), 10, 1.5, 0.35, 0.1,  100);
     sc.saveAny("scene/staircase.Scene.Any");
     */
+    // code for generating sphere cubes.
+    SphereCubes sphereCubes(Point3(2, 2, 2), 3, 60, 30);
+    sphereCubes.saveAny("scene/sphereCubes.Scene.Any");
     
     setFrameDuration(1.0f / 240.0f);
 

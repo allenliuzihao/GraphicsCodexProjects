@@ -7,12 +7,18 @@
     <ClCompile Include="source\Staircase.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="source\SphereCubes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\App.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="source\Staircase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\SphereCubes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -8,6 +8,7 @@
 #include <G3D/G3D.h>
 
 #include "Staircase.h"
+#include "SphereCubes.h"
 
 /** \brief Application framework. */
 class App : public GApp {

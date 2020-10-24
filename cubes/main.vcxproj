@@ -93,10 +93,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="source\App.h" />
+    <ClInclude Include="source\SphereCubes.h" />
     <ClInclude Include="source\Staircase.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\App.cpp" />
+    <ClCompile Include="source\SphereCubes.cpp" />
     <ClCompile Include="source\Staircase.cpp" />
   </ItemGroup>
   <ItemGroup>
