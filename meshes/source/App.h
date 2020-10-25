@@ -7,6 +7,8 @@
 #pragma once
 #include <G3D/G3D.h>
 
+#include "Cube.h"
+
 /** \brief Application framework. */
 class App : public GApp {
 protected:

@@ -70,6 +70,9 @@ App::App(const GApp::Settings& settings) : GApp(settings) {
 void App::onInit() {
     GApp::onInit();
 
+    Cube cube;
+    cube.save();
+
     setFrameDuration(1.0f / 240.0f);
 
     // Call setScene(shared_ptr<Scene>()) or setScene(MyScene::create()) to replace

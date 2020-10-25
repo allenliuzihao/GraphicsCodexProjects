@@ -3,6 +3,7 @@
 .gitignore~
 x64
 build
+*.off
 *.db
 *.opendb
 log.txt
