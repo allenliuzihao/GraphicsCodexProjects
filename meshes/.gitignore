@@ -1,0 +1,10 @@
+.vs
+..gitignore.un~
+.gitignore~
+x64
+build
+*.db
+*.opendb
+log.txt
+data-files/log.txt
+data-files/g3d-license.txt
