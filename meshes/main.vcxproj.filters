@@ -10,6 +10,9 @@
     <ClCompile Include="source\Cylinder.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="source\HeightField.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\App.h">
@@ -22,6 +25,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="source\Utilities.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\HeightField.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
