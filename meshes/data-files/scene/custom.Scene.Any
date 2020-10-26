@@ -6,7 +6,7 @@
        cubeModel = ArticulatedModel::Specification {
             filename = "model/cube.off";
             preprocess = {
-                setMaterial(all(), Color3(1, 1, 1));
+                setMaterial(all(), Color3(0, 1, 1));
             };
        };
 

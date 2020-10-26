@@ -13,7 +13,7 @@ namespace zl {
             void save();
 
         private:
-            const float degreesPerQuad = 5.0f;
+            const float degreesPerQuad = 17.0f;
 
             float radius;
             float height;
