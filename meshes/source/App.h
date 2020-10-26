@@ -14,6 +14,13 @@
 class App : public GApp {
 protected:
 
+    float m_cylinder_height = 5.0f;
+    float m_cylinder_radius = 3.0f;
+    float m_cube_length = 1.0f;
+
+    zl::Cube cube;
+    zl::Cylinder cylinder;
+
     /** Called from onInit */
     void makeGUI();
 

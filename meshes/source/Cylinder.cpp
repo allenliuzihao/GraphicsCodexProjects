@@ -12,6 +12,27 @@ void zl::Cylinder::save() {
     saveDataFile("model/cylinder.off", vertexList, indexList);
 }
 
+void zl::Cylinder::setRadius(float r) {
+    radius = r;
+    generate();
+}
+
+void zl::Cylinder::setHeight(float h) {
+    height = h;
+    generate();
+}
+
+void zl::Cylinder::setCenter(const Point3& c) {
+    center = c;
+    generate();
+}
+
+void zl::Cylinder::set(float h, float r) {
+    height = h;
+    radius = r;
+    generate();
+}
+
 void zl::Cylinder::generate() {
     vertexList.clear();
     indexList.clear();

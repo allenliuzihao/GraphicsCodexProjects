@@ -10,6 +10,16 @@ Cube::Cube(const Point3& c, float l): center(c), length(l) {
     generate();
 }
 
+void Cube::setCenter(const Point3& c) {
+    center = c;
+    generate();
+}
+
+void Cube::setLength(float l) {
+    length = l;
+    generate();
+}
+
 void Cube::save() {
     saveDataFile("model/cube.off", vertexList, indexList);
 }

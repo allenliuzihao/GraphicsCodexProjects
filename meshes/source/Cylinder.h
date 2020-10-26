@@ -10,10 +10,15 @@ namespace zl {
             Cylinder();
             Cylinder(const Point3& c, float r, float h);
 
+            void setCenter(const Point3 &c);
+            void setHeight(float h);
+            void setRadius(float r);
+            void set(float h, float r);
+
             void save();
 
         private:
-            const float degreesPerQuad = 17.0f;
+            const float degreesPerQuad = 5.0f;
 
             float radius;
             float height;

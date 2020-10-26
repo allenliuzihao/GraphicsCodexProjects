@@ -14,6 +14,8 @@ namespace zl {
         Cube();
         Cube(const Point3& c, float length);
 
+        void setCenter(const Point3 &c);
+        void setLength(float l);
         void save();
 
     private:

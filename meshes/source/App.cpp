@@ -70,11 +70,14 @@ App::App(const GApp::Settings& settings) : GApp(settings) {
 void App::onInit() {
     GApp::onInit();
 
-    zl::Cube cube;
-    cube.save();
+    this->cube.setCenter(Point3(0, 0, 0));
+    this->cube.setLength(1);
+    this->cube.save();
 
-    zl::Cylinder cylinder(Point3(-5, -5, -5), 3, 5);
-    cylinder.save();
+    this->cylinder.setCenter(Point3(-5, -5, -5));
+    this->cylinder.setHeight(5);
+    this->cylinder.setRadius(3);
+    this->cylinder.save();
 
     setFrameDuration(1.0f / 240.0f);
 
@@ -116,83 +119,37 @@ void App::makeGUI() {
     debugWindow->setVisible(true);
     developerWindow->videoRecordDialog->setEnabled(true);
 
-    GuiPane* infoPane = debugPane->addPane("Info", GuiTheme::ORNATE_PANE_STYLE);
+    GuiTabPane* tabPane = debugPane->addTabPane();
+    GuiPane* cylinderPane = tabPane->addTab("Cylinder");
+    cylinderPane->setNewChildSize(400, -1, 150);
     
-    // Example of how to add debugging controls
-    infoPane->addLabel("You can add GUI controls");
-    infoPane->addLabel("in App::onInit().");
-    infoPane->addButton("Exit", [this]() { m_endProgram = true; });
-    infoPane->pack();
+    cylinderPane->addNumberBox<float>("height", &m_cylinder_height, "", GuiTheme::LINEAR_SLIDER, 1.0f, 20.0f);
+    cylinderPane->addNumberBox<float>("radius", &m_cylinder_radius, "", GuiTheme::LINEAR_SLIDER, 1.0f, 10.0f);
+    cylinderPane->addButton("Generate Cylinder", [this]() {
+        drawMessage("Loading Cylinder...");
+        cylinder.set(m_cylinder_height, m_cylinder_radius);
+        cylinder.save();
 
-    GuiPane* rendererPane = debugPane->addPane("DefaultRenderer", GuiTheme::ORNATE_PANE_STYLE);
+        ArticulatedModel::clearCache();
+        loadScene(developerWindow->sceneEditorWindow->selectedSceneName());
+    });
+    cylinderPane->pack();
 
-    // showInTextureBrowser("G3D::GBuffer/CS_NORMAL");
+    GuiPane* cubePane = tabPane->addTab("Cube");
+    cubePane->setNewChildSize(400, -1, 150);
+    cubePane->addNumberBox<float>("length", &m_cube_length, "", GuiTheme::LINEAR_SLIDER, 1.0f, 20.0f);
+    cubePane->addButton("Generate Cube", [this]() {
+        drawMessage("Loading Cube...");
+        cube.setLength(m_cube_length);
+        cube.save();
 
-    GuiCheckBox* deferredBox = rendererPane->addCheckBox("Deferred Shading",
-        Pointer<bool>([&]() {
-                const shared_ptr<DefaultRenderer>& r = dynamic_pointer_cast<DefaultRenderer>(m_renderer);
-                return r && r->deferredShading();
-            },
-            [&](bool b) {
-                const shared_ptr<DefaultRenderer>& r = dynamic_pointer_cast<DefaultRenderer>(m_renderer);
-                if (r) { r->setDeferredShading(b); }
-            }));
-    rendererPane->addCheckBox("Order-Independent Transparency",
-        Pointer<bool>([&]() {
-                const shared_ptr<DefaultRenderer>& r = dynamic_pointer_cast<DefaultRenderer>(m_renderer);
-                return r && r->orderIndependentTransparency();
-            },
-            [&](bool b) {
-                const shared_ptr<DefaultRenderer>& r = dynamic_pointer_cast<DefaultRenderer>(m_renderer);
-                if (r) { r->setOrderIndependentTransparency(b); }
-            }));
+        ArticulatedModel::clearCache();
+        loadScene(developerWindow->sceneEditorWindow->selectedSceneName());
+    });
 
-    GuiPane* giPane = rendererPane->addPane("Raytraced GI", GuiTheme::SIMPLE_PANE_STYLE);
-	giPane->addCheckBox("Diffuse",
-		Pointer<bool>([&]() {
-			const shared_ptr<DefaultRenderer>& r = dynamic_pointer_cast<DefaultRenderer>(m_renderer);
-			return r && r->enableDiffuseGI();
-			},
-			[&](bool b) {
-				const shared_ptr<DefaultRenderer>& r = dynamic_pointer_cast<DefaultRenderer>(m_renderer);
-				if (r) { r->setEnableDiffuseGI(b); }
-			}));
-    giPane->addCheckBox("Glossy",
-        Pointer<bool>([&]() {
-            const shared_ptr<DefaultRenderer>& r = dynamic_pointer_cast<DefaultRenderer>(m_renderer);
-            return r && r->enableGlossyGI();
-            },
-            [&](bool b) {
-                const shared_ptr<DefaultRenderer>& r = dynamic_pointer_cast<DefaultRenderer>(m_renderer);
-                if (r) { r->setEnableGlossyGI(b); }
-            }));
-    giPane->addCheckBox("Show Probes",
-        Pointer<bool>([&]() {
-            const shared_ptr<DefaultRenderer>& r = dynamic_pointer_cast<DefaultRenderer>(m_renderer);
-            if (notNull(r)) {
-                bool allEnabled = r->m_ddgiVolumeArray.size() > 0;
-                for (int i = 0; i < r->m_ddgiVolumeArray.size(); ++i) {
-                    allEnabled = allEnabled && r->m_showProbeLocations[i];
-                }
-                return allEnabled;
-            }
-            return false;
-            },
-            [&](bool b) {
-                const shared_ptr<DefaultRenderer>& r = dynamic_pointer_cast<DefaultRenderer>(m_renderer);
-                if (notNull(r)) {
-                    for (int i = 0; i < r->m_ddgiVolumeArray.size(); ++i) {
-                        r->m_showProbeLocations[i] = b;
-                    }
-                }
-            }), GuiTheme::TOOL_CHECK_BOX_STYLE);
-
-    giPane->moveRightOf(deferredBox);
-    giPane->moveBy(100, 0);
-
-    rendererPane->moveRightOf(infoPane);
-    rendererPane->moveBy(10, 0);
-
+    cubePane->pack();
+    tabPane->pack();
+    
     // More examples of debugging GUI controls:
     // debugPane->addCheckBox("Use explicit checking", &explicitCheck);
     // debugPane->addTextBox("Name", &myName);
