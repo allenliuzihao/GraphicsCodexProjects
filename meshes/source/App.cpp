@@ -73,7 +73,7 @@ void App::onInit() {
     zl::Cube cube;
     cube.save();
 
-    zl::Cylinder cylinder;
+    zl::Cylinder cylinder(Point3(-5, -5, -5), 3, 5);
     cylinder.save();
 
     setFrameDuration(1.0f / 240.0f);

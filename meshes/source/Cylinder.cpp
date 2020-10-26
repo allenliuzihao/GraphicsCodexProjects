@@ -35,20 +35,17 @@ void zl::Cylinder::generate() {
         total += degreesPerQuad;
         if (total >= 360) {
             sz = vertexList.size();
-            indexList.append(2, sz - 1, sz - 2);
-            indexList.append(2, 3, sz - 1);
-            indexList.append(0, 2, sz - 2);
-            indexList.append(3, 1, sz - 1);
+            indexList.append(sz - 2, 3, 2);
+            indexList.append(sz - 2, sz - 1, 3);
+            indexList.append(2, 0, sz - 2);
+            indexList.append(sz - 1, 1, 3);
             break;
         }
 
         mat = Matrix4::yawDegrees(total);
         
-        top = (vertexList[vertexList.size() - 2] - center);
-        bottom = (vertexList[vertexList.size() - 1] - center);
-
-        newTop = mat * Vector4(top.x, top.y, top.z, 1);
-        newBot = mat * Vector4(bottom.x, bottom.y, bottom.z, 1);
+        newTop = mat * Vector4(radius, height / 2.0f, 0, 1);
+        newBot = mat * Vector4(radius, -height / 2.0f, 0, 1);
 
         top = newTop.xyz() + center;
         bottom = newBot.xyz() + center;
@@ -56,9 +53,9 @@ void zl::Cylinder::generate() {
         vertexList.append(top, bottom);
 
         sz = vertexList.size();
-        indexList.append(sz - 4, sz - 2, sz - 3);
-        indexList.append(sz - 2, sz - 1, sz - 3);
-        indexList.append(0, sz - 2, sz - 4);
-        indexList.append(sz - 1, 1, sz - 3);
+        indexList.append(sz - 4, sz - 1, sz - 2);
+        indexList.append(sz - 4, sz - 3, sz - 1);
+        indexList.append(sz - 2, 0, sz - 4);
+        indexList.append(sz - 3, 1, sz - 1);
     }
 }
