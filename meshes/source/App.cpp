@@ -70,8 +70,11 @@ App::App(const GApp::Settings& settings) : GApp(settings) {
 void App::onInit() {
     GApp::onInit();
 
-    Cube cube;
+    zl::Cube cube;
     cube.save();
+
+    zl::Cylinder cylinder;
+    cylinder.save();
 
     setFrameDuration(1.0f / 240.0f);
 

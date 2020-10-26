@@ -94,10 +94,13 @@
   <ItemGroup>
     <ClInclude Include="source\App.h" />
     <ClInclude Include="source\Cube.h" />
+    <ClInclude Include="source\Cylinder.h" />
+    <ClInclude Include="source\Utilities.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\App.cpp" />
     <ClCompile Include="source\Cube.cpp" />
+    <ClCompile Include="source\Cylinder.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="resources.rc" />

@@ -1,5 +1,7 @@
 #include "Cube.h"
 
+using namespace zl;
+
 Cube::Cube() : center(Point3(0, 0, 0)), length(1) {
     generate();
 }
@@ -9,38 +11,22 @@ Cube::Cube(const Point3& c, float l): center(c), length(l) {
 }
 
 void Cube::save() {
-    std::ofstream file("model/cube.off");
-
-    file << "OFF\n";
-    file << 8 << " " << 12 << " " << 18 << "\n";
-    file << "\n";
-
-    for (const auto& point : vertexList) {
-        file << point.x << " " << point.y << " " << point.z << "\n";
-    }
-
-    file << "\n";
-
-    for (int i = 0; i < 12; ++i) {
-        file << 3 << " " << indexList[3 * i] << " " << indexList[3 * i + 1] << " " << indexList[3 * i + 2] << "\n";
-    }
-
-    file.close();
+    saveDataFile("model/cube.off", vertexList, indexList);
 }
 
 void Cube::generate() {
     vertexList.clear();
     indexList.clear();
 
-    vertexList.append(Point3(length / 2.0f, -length/2.0f, length/2.0f));
-    vertexList.append(Point3(length / 2.0f, length / 2.0f, length / 2.0f));
-    vertexList.append(Point3(length / 2.0f, length / 2.0f, -length / 2.0f));
-    vertexList.append(Point3(length / 2.0f, -length / 2.0f, -length / 2.0f));
+    vertexList.append(Point3(length / 2.0f, -length/2.0f, length/2.0f) + center);
+    vertexList.append(Point3(length / 2.0f, length / 2.0f, length / 2.0f) + center);
+    vertexList.append(Point3(length / 2.0f, length / 2.0f, -length / 2.0f) + center);
+    vertexList.append(Point3(length / 2.0f, -length / 2.0f, -length / 2.0f) + center);
     
-    vertexList.append(Point3(-length / 2.0f, -length / 2.0f, length / 2.0f));
-    vertexList.append(Point3(-length / 2.0f, length / 2.0f, length / 2.0f));
-    vertexList.append(Point3(-length / 2.0f, length / 2.0f, -length / 2.0f));
-    vertexList.append(Point3(-length / 2.0f, -length / 2.0f, -length / 2.0f));
+    vertexList.append(Point3(-length / 2.0f, -length / 2.0f, length / 2.0f) + center);
+    vertexList.append(Point3(-length / 2.0f, length / 2.0f, length / 2.0f) + center);
+    vertexList.append(Point3(-length / 2.0f, length / 2.0f, -length / 2.0f) + center);
+    vertexList.append(Point3(-length / 2.0f, -length / 2.0f, -length / 2.0f) + center);
 
     indexList.append(2, 1, 0);
     indexList.append(3, 2, 0);

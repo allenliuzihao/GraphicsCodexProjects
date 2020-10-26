@@ -8,6 +8,7 @@
 #include <G3D/G3D.h>
 
 #include "Cube.h"
+#include "Cylinder.h"
 
 /** \brief Application framework. */
 class App : public GApp {
