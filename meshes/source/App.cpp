@@ -80,6 +80,7 @@ void App::onInit() {
     this->cylinder.save();
     
     /*
+    // height field does take sometime to generate so disable for now.
     this->heightField.setLowerLeft(Point3(5, 5, 5));
     this->heightField.setHeight(0.5f);
     this->heightField.setPixelLength(0.01f);
