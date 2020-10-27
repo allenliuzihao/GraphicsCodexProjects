@@ -79,6 +79,11 @@ void App::onInit() {
     this->cylinder.setRadius(3);
     this->cylinder.save();
 
+    this->heightField.setLowerLeft(Point3(5, 5, 5));
+    this->heightField.setHeight(0.3f);
+    this->heightField.setPixelLength(0.05f);
+    this->heightField.save();
+
     setFrameDuration(1.0f / 240.0f);
 
     // Call setScene(shared_ptr<Scene>()) or setScene(MyScene::create()) to replace
@@ -147,6 +152,28 @@ void App::makeGUI() {
         loadScene(developerWindow->sceneEditorWindow->selectedSceneName());
     });
 
+    GuiPane* heightFieldPane = tabPane->addTab("Height Field");
+    heightFieldPane->setNewChildSize(400, -1, 150);
+    heightFieldPane->addNumberBox<float>("pixel length", &m_pixel_length, "", GuiTheme::LINEAR_SLIDER, 0.01f, 5.0f);
+    heightFieldPane->addNumberBox<float>("height", &m_height, "", GuiTheme::LINEAR_SLIDER, 0.01f, 10.0f);
+
+    GuiTextBox* textBox = heightFieldPane->addTextBox("file name", &m_filename, GuiTextBox::IMMEDIATE_UPDATE);
+    textBox->setFocused(true);
+    heightFieldPane->addButton("...", [this]() {FileDialog::getFilename(m_filename, "png", false); });
+
+    heightFieldPane->addButton("Generate Height Field", [this]() {
+        drawMessage("Loading height field...");
+        
+        heightField.setHeight(m_height);
+        heightField.setPixelLength(m_pixel_length);
+        heightField.setImage(m_filename);
+        heightField.save();
+
+        ArticulatedModel::clearCache();
+        loadScene(developerWindow->sceneEditorWindow->selectedSceneName());
+    });
+
+    heightFieldPane->pack();
     cubePane->pack();
     tabPane->pack();
     

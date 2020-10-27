@@ -1,36 +1,29 @@
 #include "Cylinder.h"
 
-zl::Cylinder::Cylinder(): center(Point3(0, 0, 0)), radius(3.0f), height(5.0f) {
-    generate();
-}
+zl::Cylinder::Cylinder(): center(Point3(0, 0, 0)), radius(3.0f), height(5.0f) {}
 
-zl::Cylinder::Cylinder(const Point3& c, float r, float h): center(c), radius(r), height(h) {
-    generate();
-}
+zl::Cylinder::Cylinder(const Point3& c, float r, float h): center(c), radius(r), height(h) {}
 
 void zl::Cylinder::save() {
+    generate();
     saveDataFile("model/cylinder.off", vertexList, indexList);
 }
 
 void zl::Cylinder::setRadius(float r) {
     radius = r;
-    generate();
 }
 
 void zl::Cylinder::setHeight(float h) {
     height = h;
-    generate();
 }
 
 void zl::Cylinder::setCenter(const Point3& c) {
     center = c;
-    generate();
 }
 
 void zl::Cylinder::set(float h, float r) {
     height = h;
     radius = r;
-    generate();
 }
 
 void zl::Cylinder::generate() {

@@ -1,6 +1,6 @@
 // -*- c++ -*-
 {
-    name = "White Cube";
+    name = "Custom Scene";
 
     models = {
        cubeModel = ArticulatedModel::Specification {
@@ -14,6 +14,13 @@
             filename = "model/cylinder.off";
             preprocess = {
                 setMaterial(all(), Color3(1, 0, 0));
+            };
+       };
+
+       heightFieldModel = ArticulatedModel::Specification {
+            filename = "model/heightfield.off";
+            preprocess = {
+                setMaterial(all(), Color3(0.3, 0.3, 0.3));
             };
        };
     };
@@ -40,6 +47,11 @@
 
         cylinder0 = VisibleEntity {
             model = "cylinderModel";
+            frame = CFrame::fromXYZYPRDegrees(0, 0, 0, 0, 0, 0);
+        };
+	
+	heightfield0 = VisibleEntity {
+            model = "heightFieldModel";
             frame = CFrame::fromXYZYPRDegrees(0, 0, 0, 0, 0, 0);
         };
 

@@ -2,25 +2,20 @@
 
 using namespace zl;
 
-Cube::Cube() : center(Point3(0, 0, 0)), length(1) {
-    generate();
-}
+Cube::Cube() : center(Point3(0, 0, 0)), length(1) {}
 
-Cube::Cube(const Point3& c, float l): center(c), length(l) {
-    generate();
-}
+Cube::Cube(const Point3& c, float l): center(c), length(l) {}
 
 void Cube::setCenter(const Point3& c) {
     center = c;
-    generate();
 }
 
 void Cube::setLength(float l) {
     length = l;
-    generate();
 }
 
 void Cube::save() {
+    generate();
     saveDataFile("model/cube.off", vertexList, indexList);
 }
 

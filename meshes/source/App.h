@@ -9,6 +9,7 @@
 
 #include "Cube.h"
 #include "Cylinder.h"
+#include "HeightField.h"
 
 /** \brief Application framework. */
 class App : public GApp {
@@ -17,9 +18,14 @@ protected:
     float m_cylinder_height = 5.0f;
     float m_cylinder_radius = 3.0f;
     float m_cube_length = 1.0f;
+    float m_height = 0.3f;
+    float m_pixel_length = 0.05f;
+
+    String m_filename;
 
     zl::Cube cube;
     zl::Cylinder cylinder;
+    zl::HeightField heightField;
 
     /** Called from onInit */
     void makeGUI();
