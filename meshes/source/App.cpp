@@ -70,7 +70,6 @@ App::App(const GApp::Settings& settings) : GApp(settings) {
 void App::onInit() {
     GApp::onInit();
 
-    /*
     this->cube.setCenter(Point3(0, 0, 0));
     this->cube.setLength(1);
     this->cube.save();
@@ -79,7 +78,6 @@ void App::onInit() {
     this->cylinder.setHeight(5);
     this->cylinder.setRadius(3);
     this->cylinder.save();
-    */
     
     this->heightField.setLowerLeft(Point3(5, 5, 5));
     this->heightField.setHeight(0.5f);
@@ -135,7 +133,7 @@ void App::makeGUI() {
     cylinderPane->addButton("Generate Cylinder", [this]() {
         drawMessage("Loading Cylinder...");
         cylinder.set(m_cylinder_height, m_cylinder_radius);
-        cylinder.save();
+        cylinder.save(true);
 
         ArticulatedModel::clearCache();
         loadScene(developerWindow->sceneEditorWindow->selectedSceneName());
@@ -148,7 +146,7 @@ void App::makeGUI() {
     cubePane->addButton("Generate Cube", [this]() {
         drawMessage("Loading Cube...");
         cube.setLength(m_cube_length);
-        cube.save();
+        cube.save(true);
 
         ArticulatedModel::clearCache();
         loadScene(developerWindow->sceneEditorWindow->selectedSceneName());
@@ -169,7 +167,7 @@ void App::makeGUI() {
         heightField.setHeight(m_height);
         heightField.setPixelLength(m_pixel_length);
         heightField.setImage(m_filename);
-        heightField.save();
+        heightField.save(true);
 
         ArticulatedModel::clearCache();
         loadScene(developerWindow->sceneEditorWindow->selectedSceneName());

@@ -15,7 +15,7 @@ namespace zl {
             void setPixelLength(float p);
             void setImage(const String &fn);
 
-            void save();
+            void save(bool forceWrite = false);
 
         private:
             float pixelLength;

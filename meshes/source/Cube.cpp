@@ -14,9 +14,9 @@ void Cube::setLength(float l) {
     length = l;
 }
 
-void Cube::save() {
+void Cube::save(bool forceWrite) {
     generate();
-    saveDataFile("model/cube.off", vertexList, indexList);
+    saveDataFile("model/cube.off", vertexList, indexList, forceWrite);
 }
 
 void Cube::generate() {

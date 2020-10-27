@@ -16,7 +16,7 @@ namespace zl {
 
         void setCenter(const Point3 &c);
         void setLength(float l);
-        void save();
+        void save(bool forceWrite = false);
 
     private:
         Point3 center;

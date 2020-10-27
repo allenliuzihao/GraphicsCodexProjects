@@ -35,9 +35,9 @@ void HeightField::setImage(const String &fn) {
     image->forEachPixel<Color4>(toGrayScale);
 }
 
-void HeightField::save() {
+void HeightField::save(bool forceWrite) {
     generate();
-    saveDataFile("model/heightfield.off", vertexList, indexList);
+    saveDataFile("model/heightfield.off", vertexList, indexList, forceWrite);
 }
 
 void HeightField::generate() {

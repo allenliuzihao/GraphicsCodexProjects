@@ -35,7 +35,7 @@
             bulbPower = Power3(1e+005);
             frame = CFrame::fromXYZYPRDegrees(-15, 207, -41, -164, -77, 77);
             shadowMapSize = Vector2int16(2048, 2048);
-            spotHalfAngleDegrees = 5;
+            spotHalfAngleDegrees = 20;
             rectangular = true;
             type = "SPOT";
         };

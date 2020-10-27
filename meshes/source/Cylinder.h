@@ -15,7 +15,7 @@ namespace zl {
             void setRadius(float r);
             void set(float h, float r);
 
-            void save();
+            void save(bool forceWrite = false);
 
         private:
             const float degreesPerQuad = 5.0f;
