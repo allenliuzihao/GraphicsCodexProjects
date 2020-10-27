@@ -25,7 +25,7 @@ protected:
 
     zl::Cube cube;
     zl::Cylinder cylinder;
-    zl::HeightField heightField;
+    //zl::HeightField heightField;
 
     /** Called from onInit */
     void makeGUI();

@@ -79,10 +79,12 @@ void App::onInit() {
     this->cylinder.setRadius(3);
     this->cylinder.save();
     
+    /*
     this->heightField.setLowerLeft(Point3(5, 5, 5));
     this->heightField.setHeight(0.5f);
     this->heightField.setPixelLength(0.01f);
     this->heightField.save();
+    */
 
     setFrameDuration(1.0f / 240.0f);
 
@@ -152,6 +154,7 @@ void App::makeGUI() {
         loadScene(developerWindow->sceneEditorWindow->selectedSceneName());
     });
 
+    /*
     GuiPane* heightFieldPane = tabPane->addTab("Height Field");
     heightFieldPane->setNewChildSize(400, -1, 150);
     heightFieldPane->addNumberBox<float>("pixel length", &m_pixel_length, "", GuiTheme::LINEAR_SLIDER, 0.01f, 5.0f);
@@ -174,6 +177,8 @@ void App::makeGUI() {
     });
 
     heightFieldPane->pack();
+    */
+    
     cubePane->pack();
     tabPane->pack();
     
