@@ -22,14 +22,16 @@ namespace zl {
             float height;
             Point3 lowerLeft;
 
-            std::shared_ptr<Image> image;
+            String imageLoc;
 
             Array<Point3> vertexList;
             Array<int>     indexList;
 
-            const std::function<Color4(const Color4& src)> toGrayScale = [&](const Color4& src) {
+            const String offFileLoc = "model/heightfield.off";
+
+            const std::function<Color1(const Color4& src)> getIntensity = [&](const Color4& src) {
                 float intensity = 0.299f * src.r + 0.587f * src.g + 0.114f * src.b;
-                return Color4(Color3(intensity), src.a);
+                return Color1(intensity);
             };
 
             void generate();

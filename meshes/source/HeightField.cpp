@@ -5,17 +5,16 @@ using namespace zl;
 HeightField::HeightField(): lowerLeft(Point3(0.0f, 0.0f, 0.0f)), 
                             height(0.5f), 
                             pixelLength(0.01f),
-                            image(G3D::Image::fromFile("image/height_field.png")) {
-    image->forEachPixel<Color4>(toGrayScale);
-}
+                            imageLoc("image/height_field.png") {}
 
-HeightField::HeightField(const Point3& ll, float h, float pl, const String &fn): lowerLeft(ll), image(G3D::Image::fromFile(fn)) {
-    assert(pl >= 0.0f && "pixel length should be > 0.0f.");
-    assert(h >= 0.0f && "height should be > 0.0f.");
+HeightField::HeightField(const Point3& ll, float h, float pl, const String &fn): lowerLeft(ll) {
+    assert(pl > 0.0f && "pixel length should be > 0.0f.");
+    assert(h > 0.0f && "height should be > 0.0f.");
+    assert(!fn.empty() && "image location should be non-empty.");
 
     pixelLength = pl;
     height = h;
-    image->forEachPixel<Color4>(toGrayScale);   
+    imageLoc = fn;
 }
 
 void HeightField::setLowerLeft(const Point3 & ll) {
@@ -23,29 +22,38 @@ void HeightField::setLowerLeft(const Point3 & ll) {
 }
 
 void HeightField::setHeight(float h) {
+    assert(h > 0.0f && "height should be > 0.0f.");
     height = h;
 }
 
 void HeightField::setPixelLength(float p) {
+    assert(p > 0.0f && "pixel length should be > 0.0f.");
     pixelLength = p;
 }
 
 void HeightField::setImage(const String &fn) {
-    image = G3D::Image::fromFile(fn);
-    image->forEachPixel<Color4>(toGrayScale);
+    assert(!fn.empty() && "image location should be non-empty.");
+    imageLoc = fn;
 }
 
 void HeightField::save(bool forceWrite) {
+    if (fileExists(offFileLoc) && !forceWrite) {
+        return;
+    }
+
     generate();
-    saveDataFile("model/heightfield.off", vertexList, indexList, forceWrite);
+    saveDataFile(offFileLoc.c_str(), vertexList, indexList);
 }
 
 void HeightField::generate() {
     vertexList.clear();
     indexList.clear();
 
+    std::shared_ptr<Image> image = G3D::Image::fromFile(imageLoc);
+
     Point3 v;
-    Color1 c;
+    Color1 it;
+    Color4 c;
     int sz;
     int W = image->width(), H = image->height();
     float currW = 0.0f, currH = 0.0f;
@@ -54,7 +62,8 @@ void HeightField::generate() {
         currW = static_cast<float>(w) * pixelLength;
 
         image->get(Point2int32(w, 0), c);
-        v = Point3(currW, c.value * height, currH) + lowerLeft;
+        it = getIntensity(c);
+        v = Point3(currW, it.value * height, currH) + lowerLeft;
         vertexList.append(v);
     }
 
@@ -63,14 +72,16 @@ void HeightField::generate() {
         currH = static_cast<float>(h) * pixelLength;
 
         image->get(Point2int32(0, h), c);
-        v = Point3(currW, c.value * height, currH) + lowerLeft;
+        it = getIntensity(c);
+        v = Point3(currW, it.value * height, currH) + lowerLeft;
         vertexList.append(v);
 
         for (int w = 1; w < W; ++w) {
             currW = static_cast<float>(w) * pixelLength;
 
             image->get(Point2int32(w, h), c);
-            v = Point3(currW, c.value * height, currH) + lowerLeft;
+            it = getIntensity(c);
+            v = Point3(currW, it.value * height, currH) + lowerLeft;
             vertexList.append(v);
 
             sz = vertexList.size();

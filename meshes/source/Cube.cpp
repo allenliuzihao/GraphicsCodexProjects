@@ -15,8 +15,12 @@ void Cube::setLength(float l) {
 }
 
 void Cube::save(bool forceWrite) {
+    if (fileExists(offFileLoc) && !forceWrite) {
+        return;
+    }
+
     generate();
-    saveDataFile("model/cube.off", vertexList, indexList, forceWrite);
+    saveDataFile(offFileLoc.c_str(), vertexList, indexList);
 }
 
 void Cube::generate() {

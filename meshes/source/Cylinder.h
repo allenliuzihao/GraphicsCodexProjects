@@ -28,6 +28,8 @@ namespace zl {
             Array<Point3> vertexList;
             Array<int> indexList;
 
+            const String offFileLoc = "model/cylinder.off";
+
             void generate();
     };
 };

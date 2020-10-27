@@ -25,6 +25,8 @@ namespace zl {
         Array<Point3> vertexList;
         Array<int> indexList;
 
+        const String offFileLoc = "model/cube.off";
+
         void generate();
     };
 }

@@ -5,8 +5,12 @@ zl::Cylinder::Cylinder(): center(Point3(0, 0, 0)), radius(3.0f), height(5.0f) {}
 zl::Cylinder::Cylinder(const Point3& c, float r, float h): center(c), radius(r), height(h) {}
 
 void zl::Cylinder::save(bool forceWrite) {
+    if (fileExists(offFileLoc) && !forceWrite) {
+        return;
+    }
+
     generate();
-    saveDataFile("model/cylinder.off", vertexList, indexList, forceWrite);
+    saveDataFile(offFileLoc.c_str(), vertexList, indexList);
 }
 
 void zl::Cylinder::setRadius(float r) {

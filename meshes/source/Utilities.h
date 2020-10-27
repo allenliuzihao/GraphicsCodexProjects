@@ -5,14 +5,17 @@
 #include <fstream>
 #include <iostream>
 
-static inline void saveDataFile(const std::string& fileLoc, const Array<Point3> &vertexList, const Array<int> &indexList, bool forceWrite = false) {
+static inline bool fileExists(const String& fileLoc) {
     std::ifstream ifile;
-    ifile.open(fileLoc);
+    ifile.open(fileLoc.c_str());
 
-    if (ifile && !forceWrite) {
-        return;
+    if (ifile) {
+        return true;
     }
+    return false;
+}
 
+static inline void saveDataFile(const std::string& fileLoc, const Array<Point3> &vertexList, const Array<int> &indexList) {
     std::ofstream file(fileLoc);
     int faces = (indexList.size() / 3);
 
