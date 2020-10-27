@@ -18,10 +18,10 @@ protected:
     float m_cylinder_height = 5.0f;
     float m_cylinder_radius = 3.0f;
     float m_cube_length = 1.0f;
-    float m_height = 0.3f;
-    float m_pixel_length = 0.05f;
+    float m_height = 0.5f;
+    float m_pixel_length = 0.01f;
 
-    String m_filename;
+    String m_filename = "image/height_field.png";
 
     zl::Cube cube;
     zl::Cylinder cylinder;

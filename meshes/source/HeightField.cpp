@@ -3,8 +3,8 @@
 using namespace zl;
 
 HeightField::HeightField(): lowerLeft(Point3(0.0f, 0.0f, 0.0f)), 
-                            height(1.0f), 
-                            pixelLength(0.1f), 
+                            height(0.5f), 
+                            pixelLength(0.01f),
                             image(G3D::Image::fromFile("image/height_field.png")) {
     image->forEachPixel<Color4>(toGrayScale);
 }

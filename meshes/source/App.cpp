@@ -70,6 +70,7 @@ App::App(const GApp::Settings& settings) : GApp(settings) {
 void App::onInit() {
     GApp::onInit();
 
+    /*
     this->cube.setCenter(Point3(0, 0, 0));
     this->cube.setLength(1);
     this->cube.save();
@@ -78,10 +79,11 @@ void App::onInit() {
     this->cylinder.setHeight(5);
     this->cylinder.setRadius(3);
     this->cylinder.save();
-
+    */
+    
     this->heightField.setLowerLeft(Point3(5, 5, 5));
-    this->heightField.setHeight(0.3f);
-    this->heightField.setPixelLength(0.05f);
+    this->heightField.setHeight(0.5f);
+    this->heightField.setPixelLength(0.01f);
     this->heightField.save();
 
     setFrameDuration(1.0f / 240.0f);
