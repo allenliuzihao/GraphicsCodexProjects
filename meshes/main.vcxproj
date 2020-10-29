@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|x64">
@@ -95,6 +95,7 @@
     <ClInclude Include="source\App.h" />
     <ClInclude Include="source\Cube.h" />
     <ClInclude Include="source\Cylinder.h" />
+    <ClInclude Include="source\Glass.h" />
     <ClInclude Include="source\HeightField.h" />
     <ClInclude Include="source\Utilities.h" />
   </ItemGroup>
@@ -102,6 +103,7 @@
     <ClCompile Include="source\App.cpp" />
     <ClCompile Include="source\Cube.cpp" />
     <ClCompile Include="source\Cylinder.cpp" />
+    <ClCompile Include="source\Glass.cpp" />
     <ClCompile Include="source\HeightField.cpp" />
   </ItemGroup>
   <ItemGroup>
