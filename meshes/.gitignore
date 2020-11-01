@@ -7,6 +7,7 @@ build
 *.db
 *.opendb
 log.txt
+data-files/model
 data-files/image
 data-files/log.txt
 data-files/g3d-license.txt

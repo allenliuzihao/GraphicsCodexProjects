@@ -74,7 +74,7 @@ void App::onInit() {
     this->cube.setLength(m_cube_length);
     this->cube.save();
 
-    this->cylinder.setCenter(Point3(-10, 1, -10));
+    this->cylinder.setCenter(Point3(3, 5, 3));
     this->cylinder.setHeight(m_cylinder_height);
     this->cylinder.setRadius(m_cylinder_radius);
     this->cylinder.save();
@@ -85,7 +85,7 @@ void App::onInit() {
     this->heightField.setPixelLength(m_pixel_length);
     this->heightField.save();
 
-    this->glass.setBottomCenter(Point3(10, 1, -10));
+    this->glass.setBottomCenter(Point3(7, 1, 7));
     this->glass.setNumberOfSlices(m_number_of_slices);
     this->glass.save();
 
@@ -132,7 +132,7 @@ void App::makeGUI() {
     GuiTabPane* tabPane = debugPane->addTabPane();
     GuiPane* cylinderPane = tabPane->addTab("Cylinder");
     cylinderPane->setNewChildSize(400, -1, 150);
-    
+
     cylinderPane->addNumberBox<float>("height", &m_cylinder_height, "", GuiTheme::LINEAR_SLIDER, 1.0f, 20.0f);
     cylinderPane->addNumberBox<float>("radius", &m_cylinder_radius, "", GuiTheme::LINEAR_SLIDER, 1.0f, 10.0f);
     cylinderPane->addButton("Generate Cylinder", [this]() {
@@ -142,7 +142,7 @@ void App::makeGUI() {
 
         ArticulatedModel::clearCache();
         loadScene(developerWindow->sceneEditorWindow->selectedSceneName());
-    });
+        });
     cylinderPane->pack();
 
     GuiPane* cubePane = tabPane->addTab("Cube");
@@ -155,7 +155,7 @@ void App::makeGUI() {
 
         ArticulatedModel::clearCache();
         loadScene(developerWindow->sceneEditorWindow->selectedSceneName());
-    });
+        });
     cubePane->pack();
 
     GuiPane* heightFieldPane = tabPane->addTab("Height Field");
@@ -163,9 +163,10 @@ void App::makeGUI() {
     heightFieldPane->addNumberBox<float>("pixel length", &m_pixel_length, "", GuiTheme::LINEAR_SLIDER, 0.01f, 5.0f);
     heightFieldPane->addNumberBox<float>("height", &m_height, "", GuiTheme::LINEAR_SLIDER, 0.01f, 10.0f);
 
-    GuiTextBox* textBox = heightFieldPane->addTextBox("file name", &m_filename, GuiTextBox::IMMEDIATE_UPDATE);
-    textBox->setFocused(true);
-    heightFieldPane->addButton("...", [this]() {FileDialog::getFilename(m_filename, "png", false); });
+    heightFieldPane->beginRow(); {
+        heightFieldPane->addTextBox("file name", &m_filename, GuiTextBox::IMMEDIATE_UPDATE)->setWidth(210);
+        heightFieldPane->addButton("...", [this]() {FileDialog::getFilename(m_filename, "png", false); })->setWidth(30);
+    } heightFieldPane->endRow();
 
     heightFieldPane->addButton("Generate Height Field", [this]() {
         drawMessage("Loading height field...");
@@ -173,10 +174,13 @@ void App::makeGUI() {
         heightField.setHeight(m_height);
         heightField.setPixelLength(m_pixel_length);
         heightField.setImage(m_filename);
-        heightField.save(true);
-
-        ArticulatedModel::clearCache();
-        loadScene(developerWindow->sceneEditorWindow->selectedSceneName());
+        try {
+            heightField.save(true);
+            ArticulatedModel::clearCache();
+            loadScene(developerWindow->sceneEditorWindow->selectedSceneName());
+        } catch (...) {
+            msgBox("Unable to load the image.", m_filename);
+        }
     });
     heightFieldPane->pack();
 

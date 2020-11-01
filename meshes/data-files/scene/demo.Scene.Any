@@ -18,7 +18,7 @@
        };
 
        heightFieldModel = ArticulatedModel::Specification {
-            filename = "model/heightfield.off";
+            filename = "model/heightfield.zip/heightfield.off";
             preprocess = {
                 setMaterial(all(), Color3(0.7, 0.7, 0.2));
             };
@@ -27,7 +27,15 @@
        glassModel = ArticulatedModel::Specification {
             filename = "model/glass.off";
             preprocess = {
-                setMaterial(all(), Color4(1, 0.1, 0.1, 0.6));
+                setMaterial(all(), 
+            		UniversalMaterial::Specification {
+                	lambertian = Color3(0.02);
+                	glossy = Color4(Color3(0.3), 0.8);
+                	transmissive = Color3(0.9, 1.0, 1.0);
+                	emissive = Color3(0.01);
+                	etaReflect = 1.0;
+                	etaTransmit = 1.03;
+        	});
             };
        };
     };
@@ -38,14 +46,14 @@
        };
 
        sun = Light {
-            attenuation = (0, 0, 1);
-            bulbPower = Power3(1e+005);
-            frame = CFrame::fromXYZYPRDegrees(-15, 207, -41, -164, -77, 77);
-            shadowMapSize = Vector2int16(2048, 2048);
-            spotHalfAngleDegrees = 20;
-            rectangular = true;
+            bulbPower = Power3(2e6,1.7e6,1.4e6);
+            shadowMapBias = 0.01;
+            track = lookAt(Point3(-90, 200, 40), Point3(0, 0, 0));
+            shadowMapSize = Vector2int16(4096, 4096);
+            shadowMapBias = 0.02;
+            spotHalfAngleDegrees = 7;
             type = "SPOT";
-        };
+       };
 
         cube0 = VisibleEntity {
             model = "cubeModel";

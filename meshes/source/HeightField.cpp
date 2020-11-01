@@ -37,7 +37,7 @@ void HeightField::setImage(const String &fn) {
 }
 
 void HeightField::save(bool forceWrite) {
-    if (fileExists(offFileLoc) && !forceWrite) {
+    if (fileExists(zipFileLoc) && !forceWrite) {
         return;
     }
 

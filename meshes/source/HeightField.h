@@ -28,6 +28,7 @@ namespace zl {
             Array<int>     indexList;
 
             const String offFileLoc = "model/heightfield.off";
+            const String zipFileLoc = "model/heightfield.zip";
 
             const std::function<Color1(const Color4& src)> getIntensity = [&](const Color4& src) {
                 float intensity = 0.299f * src.r + 0.587f * src.g + 0.114f * src.b;
