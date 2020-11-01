@@ -23,6 +23,13 @@
                 setMaterial(all(), Color3(0.3, 0.3, 0.3));
             };
        };
+       
+       glassModel = ArticulatedModel::Specification {
+            filename = "model/glass.off";
+            preprocess = {
+                setMaterial(all(), Color3(0.3, 0.3, 0));
+            };
+       };
     };
 
     entities = {
@@ -50,8 +57,13 @@
             frame = CFrame::fromXYZYPRDegrees(0, 0, 0, 0, 0, 0);
         };
 	
-	heightfield0 = VisibleEntity {
-            model = "heightFieldModel";
+	//heightfield0 = VisibleEntity {
+        //    model = "heightFieldModel";
+        //    frame = CFrame::fromXYZYPRDegrees(0, 0, 0, 0, 0, 0);
+        //};
+
+	glass0 = VisibleEntity {
+            model = "glassModel";
             frame = CFrame::fromXYZYPRDegrees(0, 0, 0, 0, 0, 0);
         };
 

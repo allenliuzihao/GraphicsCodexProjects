@@ -10,6 +10,7 @@
 #include "Cube.h"
 #include "Cylinder.h"
 #include "HeightField.h"
+#include "Glass.h"
 
 /** \brief Application framework. */
 class App : public GApp {
@@ -21,11 +22,14 @@ protected:
     float m_height = 0.5f;
     float m_pixel_length = 0.01f;
 
+    int m_number_of_slices = 10;
+
     String m_filename = "image/height_field.png";
 
     zl::Cube cube;
     zl::Cylinder cylinder;
     zl::HeightField heightField;
+    zl::Glass glass;
 
     /** Called from onInit */
     void makeGUI();

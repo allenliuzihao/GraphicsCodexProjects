@@ -71,19 +71,23 @@ void App::onInit() {
     GApp::onInit();
 
     this->cube.setCenter(Point3(0, 0, 0));
-    this->cube.setLength(1);
+    this->cube.setLength(m_cube_length);
     this->cube.save();
 
     this->cylinder.setCenter(Point3(-5, -5, -5));
-    this->cylinder.setHeight(5);
-    this->cylinder.setRadius(3);
+    this->cylinder.setHeight(m_cylinder_height);
+    this->cylinder.setRadius(m_cylinder_radius);
     this->cylinder.save();
     
     // height field does take sometime to generate so disable for now.
     this->heightField.setLowerLeft(Point3(5, 5, 5));
-    this->heightField.setHeight(0.5f);
-    this->heightField.setPixelLength(0.01f);
+    this->heightField.setHeight(m_height);
+    this->heightField.setPixelLength(m_pixel_length);
     this->heightField.save();
+
+    this->glass.setBottomCenter(Point3(10, 10, 10));
+    this->glass.setNumberOfSlices(m_number_of_slices);
+    this->glass.save();
 
     setFrameDuration(1.0f / 240.0f);
 
@@ -152,6 +156,7 @@ void App::makeGUI() {
         ArticulatedModel::clearCache();
         loadScene(developerWindow->sceneEditorWindow->selectedSceneName());
     });
+    cubePane->pack();
 
     GuiPane* heightFieldPane = tabPane->addTab("Height Field");
     heightFieldPane->setNewChildSize(400, -1, 150);
@@ -173,10 +178,21 @@ void App::makeGUI() {
         ArticulatedModel::clearCache();
         loadScene(developerWindow->sceneEditorWindow->selectedSceneName());
     });
-
     heightFieldPane->pack();
+
+    GuiPane* glassPane = tabPane->addTab("Glass");
+    glassPane->setNewChildSize(400, -1, 150);
+    glassPane->addNumberBox<int>("Number of slices", &m_number_of_slices, "", GuiTheme::LINEAR_SLIDER, 3, 60);
+    glassPane->addButton("Generate Glass", [this]() {
+        drawMessage("Loading Glass...");
+        glass.setNumberOfSlices(m_number_of_slices);
+        glass.save(true);
+
+        ArticulatedModel::clearCache();
+        loadScene(developerWindow->sceneEditorWindow->selectedSceneName());
+    });
+    glassPane->pack();
     
-    cubePane->pack();
     tabPane->pack();
     
     // More examples of debugging GUI controls:
