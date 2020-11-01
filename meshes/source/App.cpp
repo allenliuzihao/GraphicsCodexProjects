@@ -70,22 +70,22 @@ App::App(const GApp::Settings& settings) : GApp(settings) {
 void App::onInit() {
     GApp::onInit();
 
-    this->cube.setCenter(Point3(0, 0, 0));
+    this->cube.setCenter(Point3(10, 1, 10));
     this->cube.setLength(m_cube_length);
     this->cube.save();
 
-    this->cylinder.setCenter(Point3(-5, -5, -5));
+    this->cylinder.setCenter(Point3(-10, 1, -10));
     this->cylinder.setHeight(m_cylinder_height);
     this->cylinder.setRadius(m_cylinder_radius);
     this->cylinder.save();
     
     // height field does take sometime to generate so disable for now.
-    this->heightField.setLowerLeft(Point3(5, 5, 5));
+    this->heightField.setLowerLeft(Point3(0, 0, 0));
     this->heightField.setHeight(m_height);
     this->heightField.setPixelLength(m_pixel_length);
     this->heightField.save();
 
-    this->glass.setBottomCenter(Point3(10, 10, 10));
+    this->glass.setBottomCenter(Point3(10, 1, -10));
     this->glass.setNumberOfSlices(m_number_of_slices);
     this->glass.save();
 

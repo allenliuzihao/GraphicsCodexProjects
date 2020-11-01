@@ -1,0 +1,74 @@
+// -*- c++ -*-
+{
+    name = "Demo Scene";
+
+    models = {
+       cubeModel = ArticulatedModel::Specification {
+            filename = "model/cube.off";
+            preprocess = {
+                setMaterial(all(), Color3(0, 0.7, 0.7));
+            };
+       };
+
+       cylinderModel = ArticulatedModel::Specification {
+            filename = "model/cylinder.off";
+            preprocess = {
+                setMaterial(all(), Color3(0.3, 0.6, 0.1));
+            };
+       };
+
+       heightFieldModel = ArticulatedModel::Specification {
+            filename = "model/heightfield.off";
+            preprocess = {
+                setMaterial(all(), Color3(0.7, 0.7, 0.2));
+            };
+       };
+       
+       glassModel = ArticulatedModel::Specification {
+            filename = "model/glass.off";
+            preprocess = {
+                setMaterial(all(), Color4(1, 0.1, 0.1, 0.6));
+            };
+       };
+    };
+
+    entities = {
+       skybox = Skybox {
+            texture = "cubemap/whiteroom/whiteroom-*.png";
+       };
+
+       sun = Light {
+            attenuation = (0, 0, 1);
+            bulbPower = Power3(1e+005);
+            frame = CFrame::fromXYZYPRDegrees(-15, 207, -41, -164, -77, 77);
+            shadowMapSize = Vector2int16(2048, 2048);
+            spotHalfAngleDegrees = 20;
+            rectangular = true;
+            type = "SPOT";
+        };
+
+        cube0 = VisibleEntity {
+            model = "cubeModel";
+            frame = CFrame::fromXYZYPRDegrees(0, 0, 0, 0, 0, 0);
+        };
+
+        cylinder0 = VisibleEntity {
+            model = "cylinderModel";
+            frame = CFrame::fromXYZYPRDegrees(0, 0, 0, 0, 0, 0);
+        };
+	
+	heightfield0 = VisibleEntity {
+            model = "heightFieldModel";
+            frame = CFrame::fromXYZYPRDegrees(0, 0, 0, 0, 0, 0);
+        };
+
+	glass0 = VisibleEntity {
+            model = "glassModel";
+            frame = CFrame::fromXYZYPRDegrees(0, 0, 0, 0, 0, 0);
+        };
+
+        camera = Camera {
+            frame = CFrame::fromXYZYPRDegrees(0, 0, 5);
+        };
+    };
+};
