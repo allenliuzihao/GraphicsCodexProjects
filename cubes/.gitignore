@@ -8,3 +8,5 @@ build
 log.txt
 data-files/log.txt
 data-files/g3d-license.txt
+data-files/scene/sphereCubes.Scene.Any
+data-files/scene/staircase.Scene.Any
